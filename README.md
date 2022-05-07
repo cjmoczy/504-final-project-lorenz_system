@@ -49,7 +49,7 @@ $ ./lorenz
 After running this in the terminal, one should see data displayed in the terminal.
 
 
-![alt text](assets/images/data.png)
+![Data Screenshot](assets/images/data.png)
 
 
 Following the step of displaying data, one can export the data into a .dat file. This is useful when plotting the data using gnuplot. 
@@ -66,8 +66,7 @@ The terminal type will now change to to 'qt'. Simply run the following command i
 ```
 gnuplot> splot "lorenz.dat" u 2:3:4 w l
 ```
-    ```md
-    ![alt text](assets/images/data.png)
-    ```
+
+![Data Screenshot](assets/images/chaotic_graph.png)
 
 ## Varying Paramters
