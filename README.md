@@ -70,3 +70,11 @@ gnuplot> splot "lorenz.dat" u 2:3:4 w l
 ![Data Screenshot](assets/images/chaotic_graph.png)
 
 ## Varying Paramters
+
+![rho=5](assets/images/rho=5.png)
+
+![rho=13](assets/images/rho=5.png)
+
+![rho=15](assets/images/rho=5.png)
+
+![rho=20](assets/images/rho=5.png)
