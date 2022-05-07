@@ -47,9 +47,11 @@ Once the executable has been made, the following executable can be ran in the te
 $ ./lorenz
 ```
 After running this in the terminal, one should see data displayed in the terminal.
-    ```md
-    ![alt text](assets/images/data.png)
-    ```
+
+```md
+![alt text](assets/images/data.png)
+```
+
 Following the step of displaying data, one can export the data into a .dat file. This is useful when plotting the data using gnuplot. 
 
 ```
