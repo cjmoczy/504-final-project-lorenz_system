@@ -73,8 +73,8 @@ gnuplot> splot "lorenz.dat" u 2:3:4 w l
 
 ![rho=5](assets/images/rho=5.png)
 
-![rho=13](assets/images/rho=5.png)
+![rho=13](assets/images/rho=13.png)
 
-![rho=15](assets/images/rho=5.png)
+![rho=15](assets/images/rho=15.png)
 
-![rho=20](assets/images/rho=5.png)
+![rho=20](assets/images/rho=20.png)
