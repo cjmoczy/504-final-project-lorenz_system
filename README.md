@@ -76,7 +76,7 @@ int main() {
 }
 ```
 
-By altering these 8 parameter values, one can begin to understand how a small change in these values results in chaotic behavior. The default values are tmax = 35, dt = 0.01, sigma = 10, beta = 8.0 / 3.0, rho = 28, init_x = 10, init_y = 10, and init_z = 10. After altering these values and saving the file, the following code should be ran in the terminal. 
+By altering these 8 parameter values, one can begin to understand how a small change in these values results in chaotic behavior. The default values are tmax = 35, dt = 0.01, sigma = 10, beta = 8.0 / 3.0, rho = 28, init_x = 10, init_y = 10, and init_z = 10. After altering these values and saving the file, the following code should be ran in the terminal:
 
 ```
 $ make
@@ -88,7 +88,7 @@ $ make
 $ make lorenz
 ```
 
-Once the executable has been made, the executable can be ran in the terminal.
+Once the executable has been made, the executable can be ran in the terminal as:
 
 ```
 $ ./lorenz
@@ -112,7 +112,7 @@ The data will be exported as lorenz.dat. In the terminal, one can now run the co
 $ gnuplot
 ```
 
-The terminal type will now change to to 'qt'. Simply run the following command in the new terminal type to display an a graph of the chaotic behavior of the lorenz system.
+The terminal type will now change to to 'qt' (assuming gnuplot has been properly installed). Simply run the following command in the new terminal type to display a graph of the chaotic behavior of the lorenz system.
 
 ```
 gnuplot> splot "lorenz.dat" u 2:3:4 w l
