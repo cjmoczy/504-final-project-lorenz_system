@@ -48,9 +48,9 @@ $ ./lorenz
 ```
 After running this in the terminal, one should see data displayed in the terminal.
 
-
-![Data Screenshot](assets/images/data.png)
-
+<p float="center">
+  <img src="assets/images/data.png" width="600" height="275"/>
+</p>
 
 Following the step of displaying data, one can export the data into a .dat file. This is useful when plotting the data using gnuplot. 
 
@@ -67,7 +67,10 @@ The terminal type will now change to to 'qt'. Simply run the following command i
 gnuplot> splot "lorenz.dat" u 2:3:4 w l
 ```
 
-![Data Screenshot](assets/images/chaotic_graph.png)
+
+<p float="center">
+  <img src="assets/images/chaotic_graph.png" width="400" />
+</p>
 
 ## Comparison of Two Initally Close Solutions 
 
@@ -81,19 +84,19 @@ Here is a compaision with fixed values of max, dt, sigma, beta, but slightly alt
 ## Additional Comparisons
 Additional comparisons of plots with fixed values of max, dt, sigma, beta, but altered values for rho is displayed below.
 
-<p float="left">
+<p float="center">
   <img src="assets/images/rho=5.png" width="400" />
   <img src="assets/images/rho=13.png" width="400" /> 
 </p>
 
-<p float="left">
+<p float="center">
   <img src="assets/images/rho=13.png" width="400" />
   <img src="assets/images/rho=20.png" width="400" /> 
 </p>
 
 ## Altered Time Values
-<p float="left">
-  <img src="assets/images/time=2.png" width="350" />
-  <img src="assets/images/time=20.png" width="350" /> 
-   <img src="assets/images/time=40.png" width="350" /> 
+<p float="center">
+  <img src="assets/images/time=2.png" width="325" />
+  <img src="assets/images/time=20.png" width="325" /> 
+   <img src="assets/images/time=40.png" width="325" /> 
 </p>
