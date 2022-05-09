@@ -69,11 +69,23 @@ gnuplot> splot "lorenz.dat" u 2:3:4 w l
 
 ![Data Screenshot](assets/images/chaotic_graph.png)
 
-## Comparison between solutions with altered rho.
+## Comparison between solutions with fixed values of max, dt, sigma, beta, but slightly altered value of rho. Simply by varing the value for rho, one can notice how the behavior changes drastically.
 
 <p float="left">
   <img src="assets/images/rho=20.png" width="500" />
+  <img src="assets/images/rho=21.png" width="500" /> 
+</p>
+
+## Additional comparisons of plots with fixed values of max, dt, sigma, beta, but altered values for rho.
+
+<p float="left">
+  <img src="assets/images/rho=5.png" width="500" />
   <img src="assets/images/rho=13.png" width="500" /> 
+</p>
+
+<p float="left">
+  <img src="assets/images/rho=13.png" width="500" />
+  <img src="assets/images/rho=20.png" width="500" /> 
 </p>
 
 
