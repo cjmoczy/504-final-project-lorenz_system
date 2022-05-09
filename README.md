@@ -51,7 +51,7 @@ After running this in the terminal, one should see data displayed in the termina
 
 ![Data Screenshot](assets/images/data.png)
 
-<img src="hassets/images/data.png" width="100" height="100">
+<img src="assets/images/data.png" width="100" height="100">
 
 
 
