@@ -51,9 +51,6 @@ After running this in the terminal, one should see data displayed in the termina
 
 ![Data Screenshot](assets/images/data.png)
 
-<img src="assets/images/data.png" width="100" height="100">
-
-
 
 Following the step of displaying data, one can export the data into a .dat file. This is useful when plotting the data using gnuplot. 
 
@@ -73,6 +70,20 @@ gnuplot> splot "lorenz.dat" u 2:3:4 w l
 ![Data Screenshot](assets/images/chaotic_graph.png)
 
 ## Varying Paramters
+
+<p float="left">
+  <img src="assets/images/rho=5.png" width="500" />
+  <img src="/img2.png" width="100" /> 
+  <img src="/img3.png" width="100" />
+</p>
+
+<img src="assets/images/data.png" width="100" height="100">
+
+<img src="assets/images/data.png" width="100" height="100">
+
+<img src="assets/images/data.png" width="100" height="100">
+
+<img src="assets/images/data.png" width="100" height="100">
 
 ![rho=5](assets/images/rho=5.png)
 
