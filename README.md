@@ -162,4 +162,4 @@ Finally a comparison of plots with varying lengths of time.
 
 ## Concluding Remarks
 
-This repository focused on exploring the lorenz sysyem using an integrator. By slightly altering the inital parameters of the system, one can begin exploring the chaotic behavior of this system. Improved methods of obtain numerical values can be incorporated into functions.cpp file.
+This repository focused on exploring the lorenz sysyem using an integrator. By slightly altering the inital parameters of the system, one can begin exploring the chaotic behavior of this system. Improved methods of obtain numerical values can be incorporated into the functions.cpp file.
