@@ -30,6 +30,23 @@ User has already installed or is readily avaliable to install the following libr
 
 ## Test
 
+A basic test was implemented to help evaluate the accuracy of the data being produced due to the utilized integrator method. In order to test the accuracy of the values, coordiantes (x,y) were set to (0,0), while coordinate (z) = (constant). By doing so, the system of equations reduces down to one expression which has the solution:
+
+<p float="center">
+  <img src="assets/images/diff_eq.png"/>
+</p>
+
+With this solution, we can compare our values to the integrator method that was implemented in this algorithm. In order to run this test, the following code can be ran in the terminal:
+
+```
+$ make lorenz_test
+```
+
+The GNUmakefile will build the executable "./lorenz_test" and execute it. Upon execution, the test will evaluate the position of z using the differnetial solution and compare this value to value obtained using the integrator. Due to the inherent error of using an integrator, the difference of the two values was compared to a fixed value of 0.005. If the difference was less than 0.005, the values were considered close and the subtest was considered as "pass". If all tests were considered a "pass", the user would be prompted with a message that all tests have passed. After running the test, one can run the following command to reset files within the directory:
+
+```
+$ make clean
+```
 
 ## Usage
 
@@ -56,11 +73,13 @@ int main() {
 
 }
 ```
+
 By altering these 8 parameter values, one can begin to understand how a small change in these values results in chaotic behavior. The default values are tmax = 35, dt = 0.01, sigma = 10, beta = 8.0 / 3.0, rho = 28, init_x = 10, init_y = 10, and init_z = 10. After altering these values and saving the file, the following code should be ran in the terminal. 
 
 ```
 $ make
 ```
+
 (The following code below also works since the default build is focused on the lorenz.cpp file.)
 
 ```
@@ -68,9 +87,11 @@ $ make lorenz
 ```
 
 Once the executable has been made, the executable can be ran in the terminal.
+
 ```
 $ ./lorenz
 ```
+
 After running this in the terminal, one should see data displayed in the terminal.
 
 <p float="center">
@@ -82,16 +103,18 @@ Following the step of displaying data, one can export the data into a .dat file.
 ```
 $ ./lorenz > lorenz.dat
 ```
+
 The data will be exported as lorenz.dat. In the terminal, one can now run the command to launch gnuplot.
 
 ```
 $ gnuplot
 ```
+
 The terminal type will now change to to 'qt'. Simply run the following command in the new terminal type to display an a graph of the chaotic behavior of the lorenz system.
+
 ```
 gnuplot> splot "lorenz.dat" u 2:3:4 w l
 ```
-
 
 <p float="center">
   <img src="assets/images/chaotic_graph.png" width="400" />
@@ -123,5 +146,5 @@ Additional comparisons of plots with fixed values of max, dt, sigma, beta, but a
 <p float="center">
   <img src="assets/images/time=2.png" width="325" />
   <img src="assets/images/time=20.png" width="325" /> 
-   <img src="assets/images/time=40.png" width="325" /> 
+  <img src="assets/images/time=40.png" width="325" /> 
 </p>
