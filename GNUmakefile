@@ -1,33 +1,34 @@
-# by default, make will try to build the first target it encounters.
-# here we make up a dummy name "ALL" (note: this is not a special make
-# name, it is just commonly used).
 
-# CFLAGS += -O2 -s -DNDEBUG
-
-ALL: lorenz
-
-# find all of the source files and header files
-
-SOURCES := $(wildcard *.cpp)
+# Getting all the sources
+SOURCE := $(wildcard *.cpp)
 HEADERS := $(wildcard *.H)
 
-# create a list of object files by replacing .cpp with .o
+# Creating the list of objects by replacing the .cpp with .o for the sources
+OBJECTS := $(SOURCE:.cpp=.o)
 
-OBJECTS := $(SOURCES:.cpp=.o)
+MAINS := lorenz.o lorenz_test.o 
+OBJECTS := $(filter-out $(MAINS), $(OBJECTS))
 
-# debug: executable
+# Debug mode
+DEBUG = TRUE
 
-# a recipe for making an object file from a .cpp file
-# Note: this makes every header file a dependency of every object file,
-# which is not ideal, but it is safe.
-
-
-# Attempt to add debug and optimize flag
+# Compiling a .cpp file to .o
 %.o : %.cpp ${HEADERS}
-	g++ -std=c++20 -g -O2 -c $<
+	g++ -std=c++20 ${CXXFLAGS} -c $<
 
-# explicitly write the rule for linking together the executable
+# Rules for making the main build
+lorenz: lorenz.o ${OBJECTS}
+	g++ -std=c++20 -o $@ lorenz.o ${OBJECTS}
 
-# Attempt to add debug and optimize flag
-lorenz: ${OBJECTS}
-	g++ -std=c++20 -g -O2 -o $@ ${OBJECTS}
+# Rules for making the test build
+lorenz_test: lorenz_test.o $(OBJECTS)
+	g++ -std=c++20 -o $@ lorenz_test.o ${OBJECTS}
+	./lorenz_test
+
+# Erase intermediate objects
+clean:
+	rm -f *.o lorenz
+	rm -f *.o lorenz_test
+	rm -f *.dat lorenz
+	rm -f *.dat lorenz_test
+

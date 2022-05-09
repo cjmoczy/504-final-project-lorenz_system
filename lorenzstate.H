@@ -15,7 +15,7 @@ struct LorenzState {
 
 LorenzState rhs(const LorenzState& state, const double sigma, const double beta, const double rho);
 void write_history(const std::vector<LorenzState>& history);
-std::vector<LorenzState> integrate_rk2(const double sigma, const double beta, const double rho, const double tmax, const double dt);
+std::vector<LorenzState> integrate_rk2(const double sigma, const double beta, const double rho, const double tmax, const double dt, const double init_x, const double init_y, const double init_z);
 
 
 std::ostream& operator<< (std::ostream& os, LorenzState& LorenzState);

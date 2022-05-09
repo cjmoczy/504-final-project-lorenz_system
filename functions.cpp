@@ -8,22 +8,14 @@
 /*
 This file containes the following functions:
 
-integrate_rk2(const double sigma, const double beta, const double rho, const double tmax, const double dt)
+integrate_rk2(const double sigma, const double beta, const double rho, const double tmax, const double dt,const double init_x, const double init_y, const double init_z)
 rhs(const LorenzState& state, const double sigma, const double beta, const double rho)
 write_history(const std::vector<LorenzState>& history)
 
-
-
 */
 
-// Added these as an extra precaution
-//LorenzState rhs(const LorenzState& state, const double sigma, const double beta, const double rho);
-//void write_history(const std::vector<LorenzState>& history);
-//std::vector<LorenzState> integrate_rk2(const double sigma, const double beta, const double rho, const double tmax, const double dt);
-
-
 // Function used to integrate through the Runge-Kutta method
-std::vector<LorenzState> integrate_rk2(const double sigma, const double beta, const double rho, const double tmax, const double dt) {
+std::vector<LorenzState> integrate_rk2(const double sigma, const double beta, const double rho, const double tmax, const double dt, const double init_x, const double init_y, const double init_z) {
 
     // how the history of the orbit
     std::vector<LorenzState> lorenz_history_rk2{};
@@ -34,9 +26,9 @@ std::vector<LorenzState> integrate_rk2(const double sigma, const double beta, co
 
     // Assuming inital coordinates (x,y,z) = (10,10,10) at t = 0 
     state.t = 0.0;
-    state.x = 10;
-    state.y = 10;
-    state.z = 10;
+    state.x = init_x;
+    state.y = init_y;
+    state.z = init_z;
 
     // Push inital conditions
     lorenz_history_rk2.push_back(state);
@@ -82,7 +74,6 @@ LorenzState rhs(const LorenzState& state, const double sigma, const double beta,
     dodt.z = state.x * state.y - beta * state.z; //state.vz;
 
     return dodt;
-
 }
 
 void write_history(const std::vector<LorenzState>& history) {
@@ -92,7 +83,6 @@ void write_history(const std::vector<LorenzState>& history) {
                   << std::setw(12) << o.x
                   << std::setw(12) << o.y
                   << std::setw(12) << o.z << std::endl;
-
     }
-
+    
 }
