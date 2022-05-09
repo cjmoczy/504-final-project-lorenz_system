@@ -91,4 +91,5 @@ Additional comparisons of plots with fixed values of max, dt, sigma, beta, but a
   <img src="assets/images/rho=20.png" width="500" /> 
 </p>
 
+## Altered Time Value
 
