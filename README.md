@@ -11,38 +11,63 @@ The purpose of this program uses an integrator to explore parameter space of the
 
 - GNUmakefile
 - lorenz.cpp
+- lorenz_test.cpp
 - functions.cpp
 - lorenzstate.H
 
 
 ## Assumptions
 
-User has gnuplot installed for use in the terminal. Inital starting coordinates are (x,y,z) = (10,10,10).
+User has already installed or is readily avaliable to install the following libraries for the code. Chrono and Thread were only included to help delay the calculation to better emphasize the steps in the test.
+```c++
+#include <iostream>
+#include <iomanip>
+#include <vector>
+#include <cmath>
+#include <chrono>
+#include <thread>
+```
+
+## Test
+
 
 ## Usage
 
-Located in the lorenz.cpp file, the following block of code below is the primary space to alter 5 parameter values: tmax, dt, sigma, beta, and rho.
+Located in the lorenz.cpp file, the following block of code below is the primary space to alter 8 parameter values. The first 5 parameters are tmax, dt, sigma, beta, and rho. The remaining 3 parameters correspond to the inital coordinates of the system.
 
 ```c++
 int main() {
 
-    double tmax = 35;
+    // Inital parameters
+    double tmax = 40;
     double dt = 0.01;
     double sigma = 10;    
     double beta = 8.0 / 3.0;
     double rho = 28;
 
-    auto lorenz_history = integrate_rk2(sigma, beta, rho, tmax, dt);
+    // Inital default coordinates set to (x,y,z) = (10,10,10)
+    double init_x = 10;
+    double init_y = 10;
+    double init_z = 10;
+
+    // Functions to produce data and output to terminal
+    auto lorenz_history = integrate_rk2(sigma, beta, rho, tmax, dt, init_x, init_y, init_z);
     write_history(lorenz_history);
 
 }
 ```
-By altering these 5 parameter values, one can begin to understand how a small change in these values results in chaotic behavior. The default values are tmax = 35, dt = 0.01, sigma = 10, beta = 8.0 / 3.0, and rho = 28. After altering these values and saving, the following code should be run in the terminal. 
+By altering these 8 parameter values, one can begin to understand how a small change in these values results in chaotic behavior. The default values are tmax = 35, dt = 0.01, sigma = 10, beta = 8.0 / 3.0, rho = 28, init_x = 10, init_y = 10, and init_z = 10. After altering these values and saving the file, the following code should be ran in the terminal. 
 
 ```
 $ make
 ```
-Once the executable has been made, the following executable can be ran in the terminal.
+(The following code below also works since the default build is focused on the lorenz.cpp file.)
+
+```
+$ make lorenz
+```
+
+Once the executable has been made, the executable can be ran in the terminal.
 ```
 $ ./lorenz
 ```
