@@ -49,7 +49,7 @@ $ ./lorenz
 After running this in the terminal, one should see data displayed in the terminal.
 
 
-![Data Screenshot](assets/images/data.png)
+![Data Screenshot](assets/images/data.png =250x250)
 
 
 Following the step of displaying data, one can export the data into a .dat file. This is useful when plotting the data using gnuplot. 
