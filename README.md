@@ -73,27 +73,27 @@ gnuplot> splot "lorenz.dat" u 2:3:4 w l
 
 Here is a compaision with fixed values of max, dt, sigma, beta, but slightly altered values of rho. Simply by varing the value for rho, one can notice how the behavior changes drastically.
 
-<p float="left">
-  <img src="assets/images/rho=20.png" width="500" />
-  <img src="assets/images/rho=21.png" width="500" /> 
+<p float="center">
+  <img src="assets/images/rho=20.png" width="400" />
+  <img src="assets/images/rho=21.png" width="400" /> 
 </p>
 
 ## Additional Comparisons
 Additional comparisons of plots with fixed values of max, dt, sigma, beta, but altered values for rho is displayed below.
 
 <p float="left">
-  <img src="assets/images/rho=5.png" width="500" />
-  <img src="assets/images/rho=13.png" width="500" /> 
+  <img src="assets/images/rho=5.png" width="400" />
+  <img src="assets/images/rho=13.png" width="400" /> 
 </p>
 
 <p float="left">
-  <img src="assets/images/rho=13.png" width="500" />
-  <img src="assets/images/rho=20.png" width="500" /> 
+  <img src="assets/images/rho=13.png" width="400" />
+  <img src="assets/images/rho=20.png" width="400" /> 
 </p>
 
 ## Altered Time Values
 <p float="left">
-  <img src="assets/images/time=2.png" width="300" />
-  <img src="assets/images/time=20.png" width="300" /> 
-   <img src="assets/images/time=40.png" width="300" /> 
+  <img src="assets/images/time=2.png" width="350" />
+  <img src="assets/images/time=20.png" width="350" /> 
+   <img src="assets/images/time=40.png" width="350" /> 
 </p>
