@@ -91,5 +91,9 @@ Additional comparisons of plots with fixed values of max, dt, sigma, beta, but a
   <img src="assets/images/rho=20.png" width="500" /> 
 </p>
 
-## Altered Time Value
-
+## Altered Time Values
+<p float="left">
+  <img src="assets/images/time=2.png" width="300" />
+  <img src="assets/images/time=20.png" width="300" /> 
+   <img src="assets/images/time=40.png" width="300" /> 
+</p>
