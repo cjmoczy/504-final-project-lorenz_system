@@ -69,26 +69,11 @@ gnuplot> splot "lorenz.dat" u 2:3:4 w l
 
 ![Data Screenshot](assets/images/chaotic_graph.png)
 
-## Varying Paramters
+## Comparison between solutions with altered rho.
 
 <p float="left">
-  <img src="assets/images/rho=5.png" width="500" />
-  <img src="/img2.png" width="100" /> 
-  <img src="/img3.png" width="100" />
+  <img src="assets/images/rho=20.png" width="500" />
+  <img src="assets/images/rho=13.png" width="500" /> 
 </p>
 
-<img src="assets/images/data.png" width="100" height="100">
 
-<img src="assets/images/data.png" width="100" height="100">
-
-<img src="assets/images/data.png" width="100" height="100">
-
-<img src="assets/images/data.png" width="100" height="100">
-
-![rho=5](assets/images/rho=5.png)
-
-![rho=13](assets/images/rho=13.png)
-
-![rho=15](assets/images/rho=15.png)
-
-![rho=20](assets/images/rho=20.png)
