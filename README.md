@@ -2,12 +2,12 @@
 Final project for PHY 504 investigating the Lorenz system and its parameters.
 
 
-This repository was created as a final project for PHY 504 which explores the Lorenz system. The Lorenz system is a system ordinary differential equations known for having chaotic solutions for specifc intial conditions and parameter values. The equations and further description of the Lorenz system can be found [https://en.wikipedia.org/wiki/Lorenz_system](https://en.wikipedia.org/wiki/Lorenz_system).
+This repository was created as a final project for PHY 504 which explores the Lorenz system. The Lorenz system is a system ordinary differential equations known for having chaotic solutions for specifc initial conditions and parameter values. The equations and further description of the Lorenz system can be found at [https://en.wikipedia.org/wiki/Lorenz_system](https://en.wikipedia.org/wiki/Lorenz_system).
 
 
 ## Purpose
 
-The purpose of this program uses an integrator to explore parameter space of the lorenz system. By varying the parameters in the problem, one can look at how two initially-close solutions compare at longer time. The integrator uses the 2nd order Runge-Kutta method, which is part of a family of iterative methods used to approximate solutions of Ordinary Differential Equations. Given some set of inital conditions, the integrator evaluates values at specific points in intervals of the specified time step. In addition, after each of iteration, values are output to the terminal, allowing for the capacity to export the data with a file extension such as *.dat or *.txt. Program consists of the following files:
+The purpose of this program uses an integrator to explore parameter space of the lorenz system. By varying the parameters in the problem, one can look at how two initially-close solutions compare at longer times. The integrator uses the 2nd order Runge-Kutta method, which is part of a family of iterative methods used to approximate solutions of Ordinary Differential Equations. Given some set of inital conditions, the integrator evaluates values at specific points in intervals of the specified time step. In addition, after each iteration, values are output to the terminal, allowing for the capacity to export the data with a file extension such as *.dat or *.txt. Program consists of the following files:
 
 - GNUmakefile
 - lorenz.cpp
@@ -18,7 +18,7 @@ The purpose of this program uses an integrator to explore parameter space of the
 
 ## Assumptions
 
-User has already installed or is readily avaliable to install the following libraries for the code. Chrono and Thread were only included to help delay the calculation to better emphasize the steps in the test.
+User has already installed or is readily avaliable to install the following libraries for the code. Chrono and Thread were only included to help delay the calculation to better emphasize the steps occuring during the test.
 ```c++
 #include <iostream>
 #include <iomanip>
@@ -28,6 +28,8 @@ User has already installed or is readily avaliable to install the following libr
 #include <thread>
 ```
 
+Additionally, having gnuplot avaliable to run on terminal will aid in data visualization.
+
 ## Test
 
 A basic test was implemented to help evaluate the accuracy of the data being produced due to the utilized integrator method. In order to test the accuracy of the values, coordiantes (x,y) were set to (0,0), while coordinate (z) = (constant). By doing so, the system of equations reduces down to one expression which has the solution:
@@ -36,13 +38,13 @@ A basic test was implemented to help evaluate the accuracy of the data being pro
   <img src="assets/images/diff_eq.png"/>
 </p>
 
-With this solution, we can compare our values to the integrator method that was implemented in this algorithm. In order to run this test, the following code can be ran in the terminal:
+With this solution, we can compare these values to the integrator method that was implemented in this algorithm. In order to run this test, the following code can be ran in the terminal:
 
 ```
 $ make lorenz_test
 ```
 
-The GNUmakefile will build the executable "./lorenz_test" and execute it. Upon execution, the test will evaluate the position of z using the differnetial solution and compare this value to value obtained using the integrator. Due to the inherent error of using an integrator, the difference of the two values was compared to a fixed value of 0.005. If the difference was less than 0.005, the values were considered close and the subtest was considered as "pass". If all tests were considered a "pass", the user would be prompted with a message that all tests have passed. After running the test, one can run the following command to reset files within the directory:
+The GNUmakefile will build the executable "./lorenz_test" and execute it. Upon execution, the test will evaluate the position of z using the differnetial solution and compare this value to the value obtained using the integrator. Due to the inherent error of using an integrator, the difference of the two values was compared to a fixed value of 0.005. If the difference was less than 0.005, the two values were considered "close" and the subtest was considered as a "pass". If all tests were considered a "pass", the user would be prompted with a message that all tests have been passed. After running the test, one can run the following command to reset files within the directory:
 
 ```
 $ make clean
