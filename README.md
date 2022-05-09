@@ -71,7 +71,7 @@ gnuplot> splot "lorenz.dat" u 2:3:4 w l
 
 ## Comparison between two initally close solutions 
 
-Here is a compaision with fixed values of max, dt, sigma, beta, but slightly altered value of rho. Simply by varing the value for rho, one can notice how the behavior changes drastically.
+Here is a compaision with fixed values of max, dt, sigma, beta, but slightly altered values of rho. Simply by varing the value for rho, one can notice how the behavior changes drastically.
 
 <p float="left">
   <img src="assets/images/rho=20.png" width="500" />
