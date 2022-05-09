@@ -15,6 +15,12 @@ The purpose of this program uses an integrator to explore parameter space of the
 - functions.cpp
 - lorenzstate.H
 
+The lornez.cpp file is primarily used to declare initial parameters of the system and to call functions.
+
+The lorenz_test.cpp file establishes a set of initial parameters to check for a difference between a differentital solution and the integrator method used in this algorithm.
+
+The functions.cpp holds the functions responsible for calcualting the derivatives, applying the 2nd order Runge-Kutta method, and writing out the data to the terminal.
+
 
 ## Assumptions
 
@@ -145,8 +151,15 @@ Additional comparisons of plots with fixed values of max, dt, sigma, beta, but a
 </p>
 
 ## Altered Time Values
+
+Finally a comparison of plots with varying lengths of time.
+
 <p float="center">
   <img src="assets/images/time=2.png" width="325" />
   <img src="assets/images/time=20.png" width="325" /> 
   <img src="assets/images/time=40.png" width="325" /> 
 </p>
+
+## Concluding Remarks
+
+This repository focused on exploring the lorenz sysyem using an integrator. By slightly altering the inital parameters of the system, one can begin exploring the chaotic behavior of this system. Improved methods of obtain numerical values can be incorporated into functions.cpp file.
